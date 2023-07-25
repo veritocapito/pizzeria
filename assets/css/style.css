@@ -1,0 +1,239 @@
+@import url('https://fonts.cdnfonts.com/css/complete-in-him?styles=11888');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
+@import url('https://fonts.cdnfonts.com/css/pistoleer');
+@import url('https://fonts.cdnfonts.com/css/helleplus32');
+@import url('https://fonts.cdnfonts.com/css/alien-ai');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primary-color: #fff;
+    --secondary-color: #ffb135;
+    --pizza-color: #CF0014;
+    --promo-color: #f9aaaa;
+}
+
+/* Header */
+
+header{
+    background-image: radial-gradient(circle at 99% 33%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 37%,transparent 37%, transparent 100%),radial-gradient(circle at 46% 16%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 43%,transparent 43%, transparent 100%),radial-gradient(circle at 99% 25%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 22%,transparent 22%, transparent 100%),radial-gradient(circle at 57% 88%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 86%,transparent 86%, transparent 100%),radial-gradient(circle at 82% 78%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 22%,transparent 22%, transparent 100%),linear-gradient(90deg, rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('../img/pizza_1280.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    --top: 
+    linear-gradient(#000 0 0) top/100% calc(100% - 50px) no-repeat,
+    radial-gradient(farthest-side,#000 98%,#0000) bottom/100px 100px no-repeat;
+    -webkit-mask: var(--top);
+    mask: var(--top);
+}
+
+nav{
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: var(--primary-color);
+    align-items: center;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 120px;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.nav-redes{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-menu a:hover,.nav-redes a:hover{
+    color: var(--promo-color);
+}
+
+.fa-brands{
+    font-size: 2rem;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.hero{
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1{
+    font-family: 'Alien AI', sans-serif;
+    font-size: 80px;
+    color: var(--primary-color);
+    margin: 0;
+    letter-spacing: 10px;
+}
+
+h2{
+    font-family: 'Complete in Him', sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    color: var(--pizza-color);
+}
+
+/* promociones */
+
+.promociones{
+    background-image: linear-gradient(180deg, rgb(249,170,170),rgb(217,191,191));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120vh;
+    --bottom: radial-gradient(calc(0px + 50px) at 50% 0px,#0000 98%,#000);
+    -webkit-mask: var(--bottom);
+            mask: var(--bottom);
+    margin-top: -50px;
+}
+
+.promos{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+.promos__header{
+    align-self: center;
+    justify-self: flex-start;
+}
+
+.promos__title{
+    font-size: 70px;
+    padding-bottom: 1rem;
+    color: var(--pizza-color);
+}
+
+.promo__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    height: 500px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 0 0.5rem;
+}
+
+.promo__img img{
+    width: 400px;
+}
+
+.promo__description{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: #000;
+}
+
+.promo__title{
+    color: var(--pizza-color);
+    font-size: 20px;
+}
+
+.promo__link{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    background-color:var(--pizza-color) ;
+    color:var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
+}
+
+.promo__link:hover{
+    opacity: 0.8;
+}
+
+.promo__text{
+    padding: 0 1.5rem;
+}
+
+.promo__price{
+    font-weight: bolder;
+    padding: 0.5rem 0rem;
+}
+
+.whatsapp{
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    width: 80px;
+}
+
+
+footer{
+    background-color: #100212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+    height: 30vh;
+    color: var(--primary-color);
+    font-family: 'helleplus32', sans-serif;
+}
+
+.footer-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.footer-redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer a:hover{
+    color: var(--promo-color);
+}
