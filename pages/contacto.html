@@ -39,22 +39,36 @@
             </nav>
         </header>
 
-        <main class="contacto">
+        <main class="contacto" id="contact">
             <div class="contacto__header">
                 <h2 class="contacto__title">Contacto</h2>
             </div>
-            <section class="contacto" id="contact">
-                <div class="contacto__container">
+            <section class="contacto__container" id="contact">
+                <div class="contacto__images">
                     <figure class="contacto__img">
-                        <img src="../assets/img/logo.png" alt="logo" loading="lazy">
+                        <img src="../assets/img/contacto_640.jpg" alt="vitrina" loading="lazy">
                     </figure>
-                    <div class="contacto__description">
-                        <h3 class="contacto__subtitle">Marinera La Floresta</h3>
-                        <p class="contacto__text">Queso Muzzarella + Frutos de mar</p>
-                        <p class="contacto__price">Precio: $ 3.500.-</p>
-                        <a href="https://wa.me/541130954760?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" class="promo__link">Pedila ya!</a>
-                    </div>
                 </div>
+                <form class="contacto__form" name="form" id="form">
+                    <div class="contacto__text">
+                        <h4 class="contacto__subtitle">Aca podes dejarnos tus comentarios, sugerencias o lo que quieras contarnos</h4>
+                    </div>
+                    <div class="contacto__inputs">
+                        <div class="contacto__input-container">
+                            <input class="contacto__input" type="text"  name="nombre" placeholder="Nombre" id="name-container">
+                        </div>
+                        <div class="contacto__input-container" >
+                            <input class="contacto__input" type="email"  name="email" placeholder="E-mail" id="email-container">
+                        </div>
+                        <div class="contacto__input-container" >
+                            <input class="contacto__input" type="text"  name="asunto" placeholder="Asunto" id="subject-container">
+                        </div>
+                        <div class="contacto__input-container" >
+                            <textarea class="contacto__textarea" rows="7"  cols="40" name="mensaje" placeholder="Mensaje" id="message-container"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="contacto__button" >Enviar mensaje</button>
+                </form>
             </section>
         </main>
 

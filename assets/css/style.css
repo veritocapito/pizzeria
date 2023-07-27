@@ -16,7 +16,8 @@
     --secondary-color: #ffb135;
     --pizza-color: #CF0014;
     --promo-color: #f9aaaa;
-    --dark-color: #3a3636;
+    --dark-color: #312f2f;
+    --light-color: #dcd6d6;
 }
 
 /* Header */
@@ -41,6 +42,7 @@ nav{
     font-family: 'M PLUS 1 Code', sans-serif;
     color: var(--primary-color);
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-logo{
@@ -55,6 +57,7 @@ nav{
 .nav-menu{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
     font-weight: 800;
     letter-spacing: 3px;
@@ -108,9 +111,8 @@ h2{
     color: var(--pizza-color);
 }
 
-/* promociones */
-
-.promociones{
+/* Background */
+.promociones, .nosotros, .menu, .sucursales, .contacto{
     background-image: linear-gradient(180deg, rgb(249,170,170),rgb(217,191,191));
     display: flex;
     flex-direction: column;
@@ -118,10 +120,25 @@ h2{
     justify-content: center;
     min-height: 120vh;
     --bottom: radial-gradient(calc(0px + 50px) at 50% 0px,#0000 98%,#000);
-    -webkit-mask: var(--bottom);
-            mask: var(--bottom);
     margin-top: -50px;
 }
+
+/* Tittle */
+.promos__title, .menu__title, .sucursales__title, .nosotros__title, .contacto__title{
+    font-size: 4.375rem;
+    padding-bottom: 1rem;
+    color: var(--pizza-color);
+}
+
+
+/* Header */
+.promos__header, .nosotros__header, .menu__header, .sucursales__header, .contacto__header{
+    align-self: center;
+    justify-self: flex-start;
+}
+
+
+/* promociones */
 
 .promos{
     display: flex;
@@ -132,16 +149,6 @@ h2{
     font-family: 'M PLUS 1 Code', sans-serif;
 }
 
-.promos__header{
-    align-self: center;
-    justify-self: flex-start;
-}
-
-.promos__title{
-    font-size: 70px;
-    padding-bottom: 1rem;
-    color: var(--pizza-color);
-}
 
 .promo__container{
     display: flex;
@@ -153,6 +160,7 @@ h2{
     background-color: var(--primary-color);
     border-radius: 5px;
     padding: 0 0.5rem;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
 }
 
 .promo__img img{
@@ -201,32 +209,7 @@ h2{
     padding: 0.5rem 0rem;
 }
 
-/* nosotros */
-
-.nosotros{
-    background-image: linear-gradient(180deg, rgb(249,170,170),rgb(217,191,191));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 120vh;
-    --bottom: radial-gradient(calc(0px + 50px) at 50% 0px,#0000 98%,#000);
-    -webkit-mask: var(--bottom);
-            mask: var(--bottom);
-    margin-top: -50px;
-    font-family: 'M PLUS 1 Code', sans-serif;
-}
-
-.nosotros__header{
-    align-self: center;
-    justify-self: flex-start;
-}
-
-.nosotros__title{
-    font-size: 4.375rem;
-    padding-bottom: 1rem;
-    color: var(--pizza-color);
-}
+/* Nosotros */
 
 .nosotros__container{
     display: flex;
@@ -235,13 +218,10 @@ h2{
     background-color: var(--primary-color);
     border-radius: 5px;
     padding: 2rem 0.5rem;
-    width: 84%;
+    width: 82%;
     height: 70vh;
     flex-wrap: wrap;
-}
-
-.nosotros__video{
-
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
 }
 
 video{
@@ -297,6 +277,133 @@ video{
     font-size: 1.3rem;
 }
 
+/* Sucursales */
+
+.sucursales{
+    min-height: 260vh;
+}
+
+.sucursales__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 3rem 0.5rem;
+    width: 82%;
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
+}
+
+.sucursales__images{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sucursales__img img{
+    width: 30vw;
+    border-radius: 5px;
+}
+
+
+/* Contacto */
+
+.contacto{
+    min-height: 170vh;
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+.contacto__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 2rem 0.5rem;
+    gap: 5rem;
+    width: 82%;
+    height: 120vh;
+    flex-wrap: wrap;
+    background-color: var(--light-color);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
+}
+
+.contacto__subtitle{
+    font-family: 'helleplus32', sans-serif;
+    font-size: 1.3rem;
+    color: var(--dark-color);
+}
+
+.contacto__form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 30%;
+}
+
+.contacto__inputs{
+    width: 100%;
+}
+
+.contacto__input{
+    align-self: flex-start;
+    border: none;
+    height: 40px;
+    outline-style: none;
+    border-radius: 5px;
+    width: 100%;
+    padding-top: 0.25rem;
+    padding-left: 0.25rem;
+    margin: 0.5rem 0;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.522);
+}
+
+.contacto__input:not(:placeholder-shown),
+.contacto__input:focus,
+.contacto__textarea:not(:placeholder-shown),
+.contacto__textarea:focus {
+    font-size: 1rem;
+    top: 0.25rem;
+    transition: all 0.25s;
+    padding-top: 0.25rem;
+}
+
+.contacto__textarea {
+    resize: none;
+    border: none;
+    outline-style: none;
+    border-radius: 5px;
+    width: 100%;
+    padding-top: 0.25rem;
+    padding-left: 0.25rem;
+    margin: 0.5rem 0;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.522);
+}
+
+.contacto__textarea::placeholder{
+    padding-top: 10px;
+}
+
+.contacto__button{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-family: ;
+    background-color:var(--pizza-color);
+    color:var(--primary-color);
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow:3px 3px 3px 0px rgba(0, 0, 0, 0.522);
+    border: none;
+    cursor: pointer;
+}
+
+.contacto__button:hover{
+    opacity: 0.8;
+}
 
 /* WhatsApp Icon */
 
