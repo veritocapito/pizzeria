@@ -13,7 +13,7 @@
 
 :root{
     --primary-color: #fff;
-    --secondary-color: #ffb135;
+    --secondary-color: #fda312;
     --pizza-color: #CF0014;
     --promo-color: #f9aaaa;
     --dark-color: #312f2f;
@@ -40,7 +40,6 @@ nav{
     display: flex;
     justify-content: space-around;
     font-family: 'M PLUS 1 Code', sans-serif;
-    color: var(--primary-color);
     align-items: center;
     flex-wrap: wrap;
 }
@@ -138,6 +137,12 @@ h2{
 }
 
 
+/* Hoover */
+.promo__link:hover, .nosotros__link:hover, .contacto__button:hover,.menu__link:hover, .menu__pdf:hover {
+    opacity: 0.8;
+}
+
+
 /* promociones */
 
 .promos{
@@ -196,9 +201,6 @@ h2{
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
 }
 
-.promo__link:hover{
-    opacity: 0.8;
-}
 
 .promo__text{
     padding: 0 1.5rem;
@@ -265,12 +267,9 @@ video{
     color:var(--primary-color);
     padding: 1rem 2rem;
     border-radius: 10px;
+    font-family: 'M PLUS 1 Code', sans-serif;
     font-weight: bold;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
-}
-
-.nosotros__link:hover{
-    opacity: 0.8;
 }
 
 .nosotros__text{
@@ -390,7 +389,6 @@ video{
     width: 100%;
     text-align: center;
     text-decoration: none;
-    font-family: ;
     background-color:var(--pizza-color);
     color:var(--primary-color);
     padding: 1rem 1rem;
@@ -401,8 +399,122 @@ video{
     cursor: pointer;
 }
 
-.contacto__button:hover{
-    opacity: 0.8;
+
+/* Menu */
+
+.menu{
+    height: 150vh;
+}
+
+.menu__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 3rem 0.5rem;
+    width: 82%;
+    height: 100vh;
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
+}
+
+.menu__card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.menu__img img{
+    width: 80px;
+}
+
+.menu__card-title{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+.menu__card-title li{
+    width: 12vw;
+    border-left: solid 2px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: medium;
+}
+
+.last{
+    border-right: solid 2px;
+}
+
+.menu__card-title li span {
+    color: var(--secondary-color);
+    
+}
+
+.menu__card-texto{
+    font-size: 0.9rem;
+}
+
+.menu__card-precio{
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.menu__card-detalle{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: 'alien-ai', sans-serif;
+}
+
+.menu__cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.menu__card{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu__card-img img{ 
+    width: 100px;
+}
+
+.menu__card-buttons{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+.menu__pdf, .menu__link{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color:var(--primary-color) ;
+    background-color:var(--secondary-color);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
+}
+
+.menu__link{
+    background-color:var(--pizza-color) ;
+    color: var(--primary-color);
 }
 
 /* WhatsApp Icon */
