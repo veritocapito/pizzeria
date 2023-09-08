@@ -116,7 +116,6 @@ h2{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 120vh;
     --bottom: radial-gradient(calc(0px + 50px) at 50% 0px,#0000 98%,#000);
     margin-top: -50px;
 }
@@ -211,7 +210,7 @@ h2{
 /* Nosotros */
 
 .nosotros{
-    height: 180vh;
+    padding: 8rem 0;
 }
 
 .nosotros__container{
@@ -220,11 +219,9 @@ h2{
     justify-content: space-around;
     background-color: var(--primary-color);
     border-radius: 5px;
-    padding: 2rem 0.5rem;
+    padding: 4rem 0rem;
     width: 82%;
-    height: 70vh;
     flex-wrap: wrap;
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
 }
 
 video{
@@ -278,19 +275,26 @@ video{
 
 .nosotros__images{
     display: flex;
-    height: 60vh;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+    margin: 4rem 0;
+    width: 100%;
+}
+
+.nosotros__img{
+    min-width: 200px;
+    flex: 300px;
 }
 
 .nosotros__img img{
-    width: 379.8px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
 }
 
 /* Sucursales */
 
 .sucursales{
-    min-height: 260vh;
+    padding: 8rem 0;
 }
 
 .sucursales__container{
@@ -339,7 +343,7 @@ video{
 }
 
 .sucursales__sucursal-schedule li{
-    width: 15vw;
+    width: 22vw;
     border-left: solid 2px;
     border-right: solid 2px;
     display: flex;
@@ -362,7 +366,7 @@ video{
 /* Contacto */
 
 .contacto{
-    min-height: 170vh;
+    padding: 8rem 0;
     font-family: 'M PLUS 1 Code', sans-serif;
 }
 
@@ -372,10 +376,9 @@ video{
     justify-content: center;
     background-color: var(--primary-color);
     border-radius: 5px;
-    padding: 2rem 0.5rem;
+    padding: 4rem 0.5rem;
     gap: 5rem;
     width: 82%;
-    height: 120vh;
     flex-wrap: wrap;
     background-color: var(--light-color);
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
@@ -461,7 +464,7 @@ video{
 /* Menu */
 
 .menu{
-    height: 150vh;
+    padding: 8rem 0;
 }
 
 .menu__container{
@@ -470,9 +473,8 @@ video{
     justify-content: space-around;
     background-color: var(--primary-color);
     border-radius: 5px;
-    padding: 3rem 0.5rem;
+    padding: 2rem 0.5rem;
     width: 82%;
-    height: 100vh;
     flex-wrap: wrap;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.522);
 }
@@ -497,10 +499,11 @@ video{
 }
 
 .menu__card-title li{
-    width: 12vw;
+    width: 22vw;
     border-left: solid 2px;
     display: flex;
     justify-content: space-evenly;
+    gap: 1rem;
     font-family: 'M PLUS 1 Code', sans-serif;
     font-size: medium;
 }
@@ -537,6 +540,7 @@ video{
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
+    padding: 3rem 0;
 }
 
 .menu__card{
@@ -578,9 +582,9 @@ video{
 
 .whatsapp{
     position: fixed;
-    bottom: 50px;
-    right: 40px;
-    width: 80px;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
 }
 
 /* Footer */
@@ -613,4 +617,119 @@ footer{
 
 footer a:hover{
     color: var(--promo-color);
+}
+
+@media screen and (max-width: 1199px){
+    
+    .nosotros__container{
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    
+    .nosotros__description{
+        align-items: center;
+        width: 80%;
+    }
+
+    video{
+        width: 60vw;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    h1{
+        font-size: 40px;
+    }
+
+    .logo{
+        width: 80px;
+    }
+
+    .nav-menu a{
+        font-size: 1rem;
+    }
+
+    .nav-redes{
+        display: none;
+    }
+
+    .menu__img{
+        display: none;
+    }
+    
+    .menu__card-title li{
+        width: 30vw;
+    }
+
+    .menu__cards{
+        justify-content: center;
+    }
+
+    .sucursales__sucursal-schedule li{
+        width: 35vw;
+    }
+    
+    .sucursales__images{
+        padding: 2rem;
+    }
+
+    .contacto__container{
+        flex-direction: column-reverse;
+    }
+
+    .contacto__form{
+        width: 55%;
+    }
+
+    .contacto__button{
+        width: 50%;
+        align-self: center;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: fit-content;
+        padding: 2rem 0;
+    }
+
+    footer .logo{
+        width: 100%;
+    }
+
+    ul {
+        padding-left: 0rem; 
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+
+
+
+
+    .sucursales__container{
+        flex-direction: column;
+    }
+
+    .sucursales__description {
+        gap: 8rem;
+        padding: 2rem;
+    }
+
+    .sucursales__img{
+        min-width: 200px;
+        flex: 350px;
+        border-radius: 5px;
+    }
+
+    .sucursales__img img{
+        width: 100%;
+        border-radius: 5px;
+    }
 }
