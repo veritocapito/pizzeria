@@ -11,6 +11,7 @@
         <meta property="og:url" content="https://veritocapito.github.io/pizzeria/">
         <meta property="og:image" content="../assets/img/logo.png">
         <meta property="og:description" content="La mejor pizza de Floresta para el mundo!">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="../assets/css/normalize.css">
         <link rel="stylesheet" href="../assets/css/style.css">
@@ -23,19 +24,23 @@
                 <h2>pizzeria</h2>
                 <h1>La Floresta</h1>
             </div>
-            <nav class="nav_container">
-                <a href="../index.html"><img class="logo" src="../assets/img/logo.png" alt="logo" loading="lazy"></a>
-                <ul class="nav-menu">
-                    <li><a href="./nosotros.html">Nosotros</a></li>
-                    <li><a href="./menu.html">Menu</a></li>
-                    <li><a href="#">Sucursales</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>
-                <ul class="nav-redes">
-                    <li><a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-square-twitter"></i></a></li>
-                    <li><a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
-                    <li><a href="http://www.telegram.com" target="_blank"><i class="fa-brands fa-telegram"></i></a></li>
-                </ul>
+            <nav>
+                <button class="open-navbar" id="open"><i class="fa-solid fa-bars"></i></button>
+                <div class="nav " id="nav">
+                    <a href="../index.html"><img class="logo" src="../assets/img/logo.png" alt="logo" loading="lazy"></a>
+                    <ul class="nav-menu">
+                        <button class="close-navbar" type="button" id="close"><i class="fa-regular fa-rectangle-xmark"></i></button>
+                        <li><a href="./nosotros.html">Nosotros</a></li>
+                        <li><a href="./menu.html">Menu</a></li>
+                        <li><a href="#">Sucursales</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                    <ul class="nav-redes">
+                        <li><a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-square-twitter"></i></a></li>
+                        <li><a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="http://www.telegram.com" target="_blank"><i class="fa-brands fa-telegram"></i></a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
 
@@ -105,5 +110,7 @@
                 <li><a href="mailto:info@pizzerialafloresta.com.ar">Envia tu CV</a></li>
             </ul>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script src="../assets/scripts/main.js"></script>
     </body>
 </html>

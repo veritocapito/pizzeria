@@ -29,13 +29,12 @@ header{
     background-size: cover;
 }
 
-nav{
-    height: 30vh;
+.nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     font-family: 'M PLUS 1 Code', sans-serif;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items: flex-end;
+    padding: 2rem;
 }
 
 .nav-logo{
@@ -54,7 +53,7 @@ nav{
 
 .nav-menu{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 2rem;
     font-weight: 800;
@@ -65,7 +64,7 @@ nav{
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .nav-menu a:hover,.nav-redes a:hover{
@@ -84,6 +83,10 @@ a{
     text-decoration: none;
     font-size: 1.2rem;
     color: var(--primary-color);
+}
+
+.open-navbar, .close-navbar {
+    display: none;
 }
 
 .hero{
@@ -115,9 +118,9 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 8rem 0;
     justify-content: center;
     --bottom: radial-gradient(calc(0px + 50px) at 50% 0px,#0000 98%,#000);
-    margin-top: -50px;
 }
 
 /* Tittle */
@@ -455,8 +458,12 @@ video{
     cursor: pointer;
 }
 
+.contacto__img{
+    margin: 0 4rem;
+}
+
 .contacto__img img{
-    width: 450px;
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -501,15 +508,12 @@ video{
 .menu__card-title li{
     width: 22vw;
     border-left: solid 2px;
+    border-right: solid 2px;
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
     font-family: 'M PLUS 1 Code', sans-serif;
     font-size: medium;
-}
-
-.last{
-    border-right: solid 2px;
 }
 
 .menu__card-title li span {
@@ -660,7 +664,7 @@ footer a:hover{
     }
     
     .menu__card-title li{
-        width: 30vw;
+        width: 80%;
     }
 
     .menu__cards{
@@ -709,10 +713,6 @@ footer a:hover{
 
 @media screen and (max-width: 768px){
 
-
-
-
-
     .sucursales__container{
         flex-direction: column;
     }
@@ -731,5 +731,153 @@ footer a:hover{
     .sucursales__img img{
         width: 100%;
         border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 595px){
+
+    .open-navbar{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 48%;
+        color: var(--light-color);
+        border: 2px solid var(--light-color);
+        padding: 0.15rem 0.5rem;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        font-size: 2rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .close-navbar{
+        color: var(--light-color);
+        border: 0;
+        font-size: 2rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    nav{
+        padding: 4rem;
+    }
+    
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        
+        position: absolute;
+        z-index: 2;
+        width: 50vh;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2rem;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        background-color: #312f2f;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    }
+
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-menu{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .close-navbar{
+        display: block;
+    }
+
+    .promos__title, .menu__title, .sucursales__title, .nosotros__title, .contacto__title{
+        font-size: 3.5rem;
+    }
+
+    .card{
+        max-width: 350px;
+    }
+
+    .menu__card{
+        flex-direction: column;
+    }
+
+    .menu__card-titulo{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .menu__card-title li {
+        width: 100%;
+    }
+
+    .menu__card-buttons{
+        flex-direction: column;
+    }
+    
+    .menu__pdf, 
+    .menu__link{
+        align-self: center;
+    }
+
+    .nosotros__title-name{
+        font-size: 1.8rem;
+    }
+
+    video{
+        margin-top: 2rem;
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .nosotros__container,
+    .menu__container,
+    .contacto__container,
+    .sucursales__container{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .sucursales__sucursal-name1,
+    .sucursales__sucursal-name2{
+        font-size: 2.5rem;
+    }
+
+    .name{
+        font-size: 1.5rem;
+    }
+
+    .sucursales__sucursal-schedule li {
+        width: 50vw;
+    }
+
+    .nosotros__link,
+    .sucursales__sucursal-link,
+    .contacto__form, 
+    .contacto__button{
+        width: 80%;
+    }
+
+    .sucursales__images{
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    footer{
+        padding: 5rem 0;
+    }
+
+    footer .logo{
+        width: 100px;
+    }
+
+    .footer-links{
+        flex-direction: column;
     }
 }
